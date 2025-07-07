@@ -6,11 +6,11 @@ A simple AI chat app built with React + TypeScript Uses the Cohere Command R+ AP
 
 1. Clone the repo 
 ```bash 
-   `git clone https://github.com/yourname/ai-chat-interface`
+   git clone https://github.com/yourname/ai-chat-interface
 ```
 2. Install dependencies  
 ```bash
-   `npm install`
+   npm install
 ```
 3. Add your OpenAI API key  
    Create a `.env.local` file with:
@@ -19,7 +19,7 @@ A simple AI chat app built with React + TypeScript Uses the Cohere Command R+ AP
    ```
 4. Run locally  
 ```bash
-`npm run dev`
+npm run dev
 ```
 ## ✨ Features
 
