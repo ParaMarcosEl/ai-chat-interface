@@ -1,0 +1,16 @@
+/* App.scss */
+
+.app {
+  min-height: 100vh;
+  background-color: #242424;
+  color: #1f2937; // Tailwind's gray-800
+  padding: 1rem;
+}
+
+.app-title {
+  font-size: 1.875rem; // Tailwind's text-3xl
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color:#2563eb;
+}

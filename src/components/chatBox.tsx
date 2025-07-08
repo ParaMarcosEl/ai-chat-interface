@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { askCohere } from "../services/cohere";
+import "../styles/chatBox.scss"; // ✅ Import SCSS
 
 type Props = {
   onResponse: (user: string, ai: string) => void;
@@ -26,23 +27,24 @@ export default function ChatBox({ onResponse }: Props) {
   }
 
   return (
-    <div className="w-full max-w-xl mx-auto mt-10">
+    <div className="chat-box">
       <textarea
-        className="w-full p-2 border rounded mb-2"
         placeholder="Ask AI something..."
         rows={3}
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            handleSubmit();
+          }
+        }}
       />
-      <div className="flex justify-between items-center">
-        <button
-          onClick={handleSubmit}
-          className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
-          disabled={loading}
-        >
+      <div className="chat-actions">
+        <button onClick={handleSubmit} disabled={loading}>
           {loading ? "Thinking..." : "Ask AI"}
         </button>
-        {error && <span className="text-red-600 text-sm">{error}</span>}
+        {error && <span className="error">{error}</span>}
       </div>
     </div>
   );
