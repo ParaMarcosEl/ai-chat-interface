@@ -3,6 +3,7 @@
 .chat-history {
   margin-top: 1.5rem; // Tailwind mt-6
     width: calc(100vw - 60px);
+    max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
 
