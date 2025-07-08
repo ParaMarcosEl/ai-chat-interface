@@ -28,7 +28,7 @@ npm install
 ### 3. Set up your Cohere API key
 Create a `.env` file in the root of the project and add your API key:
 ```bash
-VITE_COHERE_API_KEY=your-cohere-api-key-here
+VITE_CHAT_API_KEY=your-cohere-api-key-here
 ```
 🔐 You can get a free API key by signing up at https://dashboard.cohere.com.
 
@@ -47,9 +47,13 @@ Uses Vitest and React Testing Library
 
 ### 🛠 Tech Stack
 React + TypeScript
+
 SCSS for styling
+
 Cohere API for AI responses
+
 Vite for bundling
+
 Vitest for unit testing
 
 ### 📁 Project Structure
